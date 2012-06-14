@@ -3,7 +3,7 @@
 
 This package provides **scalaz-unicode-input-method**, an input
 method which allows you to easily type a number of Unicode symbols
-that are useful when writing Scala code using Scalaz library.
+that are useful when writing Scala code using [Scalaz](https://github.com/scalaz/scalaz) library.
 
 To automically load in scala-mode put the following code in your
 .emacs file:
