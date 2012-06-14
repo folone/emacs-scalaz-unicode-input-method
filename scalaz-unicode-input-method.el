@@ -34,15 +34,15 @@
 ;; ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 ;; OF THE POSSIBILITY OF SUCH DAMAGE.
 
-(provide 'haskell-unicode-input-method)
+(provide 'scalaz-unicode-input-method)
 (require 'quail)
 
 (quail-define-package
- "haskell-unicode" ;; name
+ "scalaz-unicode" ;; name
  "UTF-8"           ;; language
  "\\"              ;; title
  t                 ;; guidance
- "Haskell Unicode input method.
+ "Scalaz Unicode input method.
 Designed to be used with the Haskell UnicodeSyntax language
 extension in combination with the x-unicode-symbols set of
 packages (base-unicode-symbols and containers-unicode-symbols).
@@ -82,7 +82,7 @@ packages (base-unicode-symbols and containers-unicode-symbols).
  ("Iota "            ["Ι"])
  ("kappa "           ["κ"])
  ("Kappa "           ["Κ"])
- ("lambda "          ["λ"])
+ ("lambda "               ["λ"])
  ("Lambda "          ["Λ"])
  ("lamda "           ["λ"])
  ("Lamda "           ["Λ"])
@@ -159,144 +159,37 @@ packages (base-unicode-symbols and containers-unicode-symbols).
  ("|pi|"             ["ℼ"])
  ("|Pi|"             ["ℿ"])
 
- ;; Types
- ("::"               ["∷"])
-
- ;; Quantifiers
- ("forall"           ["∀"])
- ("exists"           ["∃"])
-
- ;; Arrows
- ("->"               ["→"])
- ;; ("-->"              ["⟶"])
- ("<-"               ["←"])
- ;; ("<--"              ["⟵"])
- ;; ("<->"              ["↔"])
- ;; ("<-->"             ["⟷"])
-
- ("=>"               ["⇒"])
- ;; ("==>"              ["⟹"])
- ;; ("<="               ["⇐"])
- ;; ("<=="              ["⟸"])
- ;; ("<=>"              ["⇔"])
- ;; ("<==>"             ["⟺"])
-
- ;; ("|->"              ["↦"])
- ;; ("|-->"             ["⟼"])
- ;; ("<-|"              ["↤"])
- ;; ("<--|"             ["⟻"])
-
- ;; ("|=>"              ["⤇"])
- ;; ("|==>"             ["⟾"])
- ;; ("<=|"              ["⤆"])
- ;; ("<==|"             ["⟽"])
-
- ("~>"               ["⇝"])
- ;; ("~~>"              ["⟿"])
- ("<~"               ["⇜"])
- ;; ("<~~"              ["⬳"])
-
- ;; (">->"              ["↣"])
- ;; ("<-<"              ["↢"])
- ;; ("->>"              ["↠"])
- ;; ("<<-"              ["↞"])
-
- ;; (">->>"             ["⤖"])
- ;; ("<<-<"             ["⬻"])
-
- ;; ("<|-"              ["⇽"])
- ;; ("-|>"              ["⇾"])
- ;; ("<|-|>"            ["⇿"])
-
- ;; ("<-/-"             ["↚"])
- ;; ("-/->"             ["↛"])
-
- ;; ("<-|-"             ["⇷"])
- ;; ("-|->"             ["⇸"])
- ;; ("<-|->"            ["⇹"])
-
- ;; ("<-||-"            ["⇺"])
- ;; ("-||->"            ["⇻"])
- ;; ("<-||->"           ["⇼"])
-
- ;; ("-o->"             ["⇴"])
- ;; ("<-o-"             ["⬰"])
-
- ;; Boolean operators
- ;; ("not"              ["¬"])
- ("&&"               ["∧"])
- ("||"               ["∨"])
-
- ;; Relational operators
- ("=="               ["≡"])
- ("/="               ["≢" "≠"])
- ("<="               ["≤"])
- (">="               ["≥"])
- ("/<"               ["≮"])
- ("/>"               ["≯"])
-
- ;; Arithmetic
- ;; (" / "              [" ÷ "])
- (" * "              [" ⋅ "])
-
- ;; Containers / Collections
- ;; ("++"               ["⧺"])
- ;; ("+++"              ["⧻"])
- ;; ("|||"              ["⫴"])
- ;; ("empty"            ["∅"])
- ("elem"             ["∈"])
- ("notElem"          ["∉"])
- ("member"           ["∈"])
- ("notMember"        ["∉"])
- ("union"            ["∪"])
- ("intersection"     ["∩"])
- ("isSubsetOf"       ["⊆"])
- ("isProperSubsetOf" ["⊂"])
-
- ;; Other
- ;; ("<<"               ["≪"])
- ;; (">>"               ["≫"])
- ("<<<"              ["⋘"])
- (">>>"              ["⋙"])
- ("<|"               ["⊲"])
- ("|>"               ["⊳"])
- ("><"               ["⋈"])
- ;; ("mempty"           ["∅"])
- ("mappend"          ["⊕"])
- ;; ("<*>"              ["⊛"])
- (" . "              [" ∘ "])
- ("undefined"        ["⊥"])
- (":="               ["≔"])
- ("=:"               ["≕"])
- ("=def"             ["≝"])
- ("=?"               ["≟"])
- ("..."              ["…"])
-
- ;; Braces
- ;; ("[|"               ["〚"])
- ;; ("|]"               ["〛"])
-
- ;; Numeric subscripts
- ("_0 "              ["₀"])
- ("_1 "              ["₁"])
- ("_2 "              ["₂"])
- ("_3 "              ["₃"])
- ("_4 "              ["₄"])
- ("_5 "              ["₅"])
- ("_6 "              ["₆"])
- ("_7 "              ["₇"])
- ("_8 "              ["₈"])
- ("_9 "              ["₉"])
-
- ;; Numeric superscripts
- ("^0 "              ["⁰"])
- ("^1 "              ["¹"])
- ("^2 "              ["²"])
- ("^3 "              ["³"])
- ("^4 "              ["⁴"])
- ("^5 "              ["⁵"])
- ("^6 "              ["⁶"])
- ("^7 "              ["⁷"])
- ("^8 "              ["⁸"])
- ("^9 "              ["⁹"])
+ ;; Other (according to
+ ;; http://www.folone.info/2012/02/28/Scalaz-Unicode)
+ ("pure"           ["η"])
+ ("join"           ["μ"])
+ ("zero"           ["∅"])
+ ("empty"          ["<∅>"])
+ ("contramap"      ["∙"])
+ ("map"            ["∘"])
+ ("map2"           ["∘∘"])
+ ("kleisli"        ["☆"])
+ ("cokleisli"      ["★"])
+ ("dual"           ["σ"])
+ ("|@|"            ["⊛"])
+ ("any"            ["∃"])
+ ("all"            ["∀"])
+ ("traverse"       ["↦"])
+ ("zip"            ["ʐ"])
+ ("<<<"            ["⋘"])
+ (">>>"            ["⋙"]) 
+ ("undefined"      ["⊥"])
+ (">>="            ["∗"])
+ ("|+|"            ["⊹"])
+ ("multiplication" ["∏"])
+ ("==="            ["≟"])
+ ("/=="            ["≠"])
+ ("contains"       ["∋" "∈"])
+ ("&&"             ["∧"])
+ ("||"             ["∨"])
+ ("nor"            ["⊽"])
+ ("nand"           ["⊼"])
+ ("->"             ["→"])
+ ("<-"             ["←"])
+ ("=>"             ["⇒"])
 )
