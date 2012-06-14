@@ -1,5 +1,5 @@
 # Emacs Scalaz Unicode input method
-## adapted version of "Emacs Haskell unicode input method":https://github.com/roelvandijk/emacs-haskell-unicode-input-method
+## adapted version of [Emacs Haskell unicode input method](https://github.com/roelvandijk/emacs-haskell-unicode-input-method)
 
 This package provides **scalaz-unicode-input-method**, an input
 method which allows you to easily type a number of Unicode symbols
