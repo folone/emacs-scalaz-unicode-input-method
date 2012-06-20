@@ -1,4 +1,4 @@
-;; Haskell Unicode helper functions
+;; Scalaz Unicode helper functions
 ;;
 ;; Copyright 2010—2011 Roel van Dijk
 ;;
@@ -42,22 +42,18 @@
  "UTF-8"           ;; language
  "\\"              ;; title
  t                 ;; guidance
- "Scalaz Unicode input method.
-Designed to be used with the Haskell UnicodeSyntax language
-extension in combination with the x-unicode-symbols set of
-packages (base-unicode-symbols and containers-unicode-symbols).
-"                  ;; docstring
-  nil              ;; translation-keys
-  nil              ;; forget-last-selection
-  nil              ;; deterministic
-  nil              ;; kbd-translate
-  nil              ;; show-layout
-  nil              ;; create-decode-map
-  nil              ;; maximum-shortest
-  nil              ;; overlay-plist
-  nil              ;; update-translation-function
-  nil              ;; conversion-keys
-  t                ;; simple
+ "Scalaz Unicode input method." ;; docstring
+  nil                           ;; translation-keys
+  nil                           ;; forget-last-selection
+  nil                           ;; deterministic
+  nil                           ;; kbd-translate
+  nil                           ;; show-layout
+  nil                           ;; create-decode-map
+  nil                           ;; maximum-shortest
+  nil                           ;; overlay-plist
+  nil                           ;; update-translation-function
+  nil                           ;; conversion-keys
+  t                             ;; simple
   )
 
 (quail-define-rules
@@ -189,7 +185,7 @@ packages (base-unicode-symbols and containers-unicode-symbols).
  (" || "            [" ∨ "])
  (" nor "           [" ⊽ "])
  (" nand "          [" ⊼ "])
- ("->"              ["→"])
- ("<-"              ["←"])
- ("=>"              ["⇒"])
+ (" ->"             [" →"])
+ (" <-"             [" ←"])
+ (" =>"             [" ⇒"])
 )
