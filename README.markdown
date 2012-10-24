@@ -32,3 +32,15 @@ If you don't like the highlighting of partially matching tokens you
 can turn it off:
 
     (setq input-method-highlight-flag nil)
+
+If using with evil-mode, consider adding the following to your config:
+
+    ;; Only enable unicode mode for insert and emacs states in evil-mode
+    (add-hook 'evil-insert-state-entry-hook
+                (lambda () (set-input-method "scalaz-unicode")))
+    (add-hook 'evil-insert-state-exit-hook
+                (lambda () (set-input-method nil)))
+    (add-hook 'evil-emacs-state-entry-hook
+                (lambda () (set-input-method "scalaz-unicode")))
+    (add-hook 'evil-emacs-state-exit-hook
+                (lambda () (set-input-method nil)))
